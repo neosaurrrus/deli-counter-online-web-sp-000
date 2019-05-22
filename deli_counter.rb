@@ -18,10 +18,12 @@ def now_serving(katz_deli)
     puts "There is nobody waiting to be served!"
     return
   end
+  
+  serving = []
   puts "Currently serving #{katz_deli[0]}"
   katz_deli.unshift;
-  serving = []
   katz_deli.each_with_index do | customer, index |
+  
     serving << "#{index+1}. #{customer}"
   end
   puts "The line is currently: #{serving.join(" ")}"
