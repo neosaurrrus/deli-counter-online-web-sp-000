@@ -13,7 +13,7 @@ def take_a_number(katz_deli, customer)
   puts "Welcome #{customer}. You are #{katz_deli.size} in line."
 end
 
-def now_serving(katz_deli) 
+def now_serving(katz_deli)
   puts "Currently serving #{katz_deli[0]}"
   katz_deli.unshift;
   serving = []
@@ -21,6 +21,6 @@ def now_serving(katz_deli)
     serving << "#{index+1}. #{customer}"
   end
   puts "The line is currently: #{serving.join(" ")}"
-    
+
 end
   
