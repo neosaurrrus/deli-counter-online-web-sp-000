@@ -14,6 +14,9 @@ def take_a_number(katz_deli, customer)
 end
 
 def now_serving(katz_deli)
+  if katz_deli.size < 1
+    puts "There is nobody waiting to be served!"
+  end
   puts "Currently serving #{katz_deli[0]}"
   katz_deli.unshift;
   serving = []
@@ -21,6 +24,5 @@ def now_serving(katz_deli)
     serving << "#{index+1}. #{customer}"
   end
   puts "The line is currently: #{serving.join(" ")}"
-
 end
   
