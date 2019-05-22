@@ -25,7 +25,7 @@ def now_serving(katz_deli)
     puts "There is nobody waiting to be served!"
     return
   end
-  puts "Currently serving #{katz_deli[0]}"
+  puts "Currently serving #{katz_deli[0]}."
   katz_deli.unshift
   line(katz_deli)
 
