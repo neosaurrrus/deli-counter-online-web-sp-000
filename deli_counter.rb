@@ -10,7 +10,6 @@ def line(katz_deli)
     katz_deli.each_with_index do | customer, index |
       serving << "#{index+1}. #{customer}"
     end
-    puts serving
     puts "The line is currently: #{serving.join(" ")}"
   end
 
