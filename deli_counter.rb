@@ -5,6 +5,11 @@ katz_deli = []
 def line(katz_deli)
   if katz_deli.size < 1
     puts "The line is currently empty."
+    katz_deli.each_with_index do | customer, index |
+      serving << "#{index+1}. #{customer}"
+    end
+    puts serving
+    puts "The line is currently: #{serving.join(" ")}"
   end
 end
 
@@ -19,13 +24,8 @@ def now_serving(katz_deli)
     puts "There is nobody waiting to be served!"
     return
   end
-
-  serving = []
   puts "Currently serving #{katz_deli[0]}"
-  katz_deli.unshift;
-  katz_deli.each_with_index do | customer, index |
-    serving << "#{index+1}. #{customer}"
-  end
-  puts serving
-  puts "The line is currently: #{serving.join(" ")}"
+  katz_deli.unshift
+  line(katz_deli)
+
 end
