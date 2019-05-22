@@ -26,7 +26,7 @@ def now_serving(katz_deli)
     return
   end
   puts "Currently serving #{katz_deli[0]}."
-  katz_deli.unshift
+  katz_deli.shift
   line(katz_deli)
 
 end
