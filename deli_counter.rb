@@ -26,5 +26,6 @@ def now_serving(katz_deli)
 
     serving << "#{index+1}. #{customer}"
   end
+  puts serving
   puts "The line is currently: #{serving.join(" ")}"
 end
