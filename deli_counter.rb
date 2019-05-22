@@ -5,14 +5,15 @@ katz_deli = []
 def line(katz_deli)
   if katz_deli.size < 1
     puts "The line is currently empty."
-    return
+  else
+    serving = []
+    katz_deli.each_with_index do | customer, index |
+      serving << "#{index+1}. #{customer}"
+    end
+    puts serving
+    puts "The line is currently: #{serving.join(" ")}"
   end
-  serving = []
-  katz_deli.each_with_index do | customer, index |
-    serving << "#{index+1}. #{customer}"
-  end
-  puts serving
-  puts "The line is currently: #{serving.join(" ")}"
+
 end
 
 def take_a_number(katz_deli, customer)
